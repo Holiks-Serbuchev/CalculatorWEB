@@ -38,15 +38,15 @@ namespace CalculatorWEB.Controllers
             {
                 if (item2 != "" && item2 != null)
                 {
-                    char sa = item2[item2.Length - 1];
+                    char charValue = item2[item2.Length - 1];
                     item2 = item2.Remove(item2.Length - 1);
-                    if (sa == '+')
+                    if (charValue == '+')
                         equal = item1 + Convert.ToDouble(item2);
-                    else if (sa == '-')
+                    else if (charValue == '-')
                         equal = Convert.ToDouble(item2) - item1;
-                    else if (sa == '*')
+                    else if (charValue == '*')
                         equal = item1 * Convert.ToDouble(item2);
-                    else if (sa == '/')
+                    else if (charValue == '/')
                         equal = Convert.ToDouble(item2) / item1;
                 }
             }
