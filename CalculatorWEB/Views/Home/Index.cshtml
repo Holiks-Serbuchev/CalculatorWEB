@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<html>
+<head>
+    <title>Калькулятор</title>
+</head>
+<body>
+    <h2>Калькулятор</h2>
+    <div class="row">
+        <form method="POST" asp-action="Clicked">
+            <input type="text" class="form-control" readonly="readonly" id="FirstTB" value="@(Model)" name="item1" />
+            <input type="text" class="form-control" id="ResultTB" readonly="readonly" name="item2" />
+            <table>
+                <tr>
+                    <td><button type="button" class="btn btn-info" id="ClearB" value="ClearB" name="ClearB" onclick="ClearClick()">C</button></td>
+                    <td><button type="button" class="btn btn-info" id="sevenB" value="sevenB" name="calculate" onclick="AddValuesTB(this.id)">7</button></td>
+                    <td><button type="button" class="btn btn-info" id="eightB" value="eightB" name="calculate" onclick="AddValuesTB(this.id)">8</button></td>
+                    <td><button type="button" class="btn btn-info" id="nineB" value="nineB" name="calculate" onclick="AddValuesTB(this.id)">9</button></td>
+                    <td><button type="button" class="btn btn-info" id="PlusB" value="add" name="PlusB" onclick="SelectChar(this.id)">+</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="button" class="btn btn-info" id="fourB" value="fourB" name="calculate" onclick="AddValuesTB(this.id)">4</button></td>
+                    <td><button type="button" class="btn btn-info" id="fiveB" value="fiveB" name="calculate" onclick="AddValuesTB(this.id)">5</button></td>
+                    <td><button type="button" class="btn btn-info" id="sixB" value="sixB" name="calculate" onclick="AddValuesTB(this.id)">6</button></td>
+                    <td><button type="button" class="btn btn-info" id="min" value="min" name="MinB" onclick="SelectChar(this.id)">-</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="button" class="btn btn-info" id="firstB" value="fourB" name="calculate" onclick="AddValuesTB(this.id)">1</button></td>
+                    <td><button type="button" class="btn btn-info" id="secondB" value="fiveB" name="calculate" onclick="AddValuesTB(this.id)">2</button></td>
+                    <td><button type="button" class="btn btn-info" id="treeB" value="treeB" name="calculate" onclick="AddValuesTB(this.id)">3</button></td>
+                    <td><button type="button" class="btn btn-info" id="sub" value="sub" name="SumB" onclick="SelectChar(this.id)">*</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" class="btn btn-info" id="equalsB" value="=" name="calculate" /></td>
+                    <td><button type="button" class="btn btn-info" id="zeroB" value="zeroB" name="calculate" onclick="AddValuesTB(this.id)">0</button></td>
+                    <td><button type="button" class="btn btn-info" id="pointB" value="pointB" name="calculate" onclick="PointClick(this.id)">,</button></td>
+                    <td><button type="button" class="btn btn-info" id="divv" value="divv" name="DelB" onclick="SelectChar(this.id)">/</button></td>
+                </tr>
+            </table>
+        </form>
+        <script type="text/javascript" src="\js\site.js" charset="utf-8"></script>
+    </div>
+</body>
+</html>
